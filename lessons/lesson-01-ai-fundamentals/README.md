@@ -50,38 +50,66 @@ This lesson introduces three core legacy technologies common in government syste
 
 ### Understanding Government Environment Constraints
 
-Before diving into AI tool usage, it's crucial to understand the unique constraints of government development environments:
+**Why This Matters**: Government development environments have unique security, compliance, and operational constraints that don't exist in private sector development. Understanding these constraints helps you configure AI tools appropriately and avoid potential security or compliance issues. Please note different agencies and levels of government will have more or less specific standards. You should always check with your risk manager prior to using any AI technology within your environment. 
 
-- **Security considerations**: Code may contain sensitive information
-- **Network restrictions**: Limited or no internet access in some environments
-- **Approval processes**: Tools may require security review before deployment
-- **Compliance requirements**: Must adhere to federal development standards
+**Key Government Constraints**:
+- **Security considerations**: Code may contain sensitive information that cannot be shared with cloud-based AI services
+- **Network restrictions**: Many government environments have limited or no internet access, affecting cloud-based AI tools
+- **Approval processes**: New development tools often require security review, procurement approval, and formal adoption processes
+- **Compliance requirements**: All development must adhere to federal standards (NIST, FedRAMP, Section 508, etc.) This guide is built assuming federal level standards and restrictions, use your best judgement for your agency or use case. 
+
+*For detailed government development standards, see our [Government Resources Guide](../../GOVERNMENT_RESOURCES.md)*
 
 ### AI Tool Configuration Best Practices
 
+**Why Configure Specifically for Government Use**: Default AI tool settings are designed for general commercial development. Government use requires specific privacy, security, and data handling considerations.
+
 #### 1. Privacy and Security Settings
+
+**Purpose**: Ensure your AI tool usage complies with government security requirements and protects sensitive information.
+
 ```text
-AI Tool Checklist:
-□ Review data sharing and privacy policies
-□ Configure offline mode if available
-□ Understand what code/data is transmitted
-□ Set up project-specific configurations
-□ Document tool approval status for your organization
+AI Tool Configuration Checklist:
+□ Review data sharing and privacy policies (understand what gets transmitted)
+    → WHY: Government code may contain sensitive patterns, citizen data, or classified algorithms
+□ Configure offline mode if available (for air-gapped environments)
+    → WHY: Many government networks prohibit cloud AI access; offline capabilities ensure tool usability
+□ Disable automatic code sharing/telemetry (protect sensitive patterns)
+    → WHY: Default telemetry may transmit code snippets for product improvement, creating security risks
+□ Set up project-specific configurations (isolate government work)
+    → WHY: Prevents cross-contamination between personal projects and government work environments
+□ Document tool approval status for your organization (compliance tracking)
+    → WHY: Audit trails are required for government development tool usage and security reviews
+□ Understand data retention policies (know how long your code is stored)
+    → WHY: Government data lifecycle requirements may conflict with vendor retention policies
 ```
 
+**Action Required**: Review your AI tool's privacy settings now and configure according to your organization's security requirements, even if you're doing this lesson on a personal computer, just for practice. 
+
 #### 2. Government-Friendly Prompting Approach
-- **Be explicit about context**: Always specify the technology and government context
-- **Request explanations**: Ask for rationale behind suggestions
-- **Verify compliance**: Request consideration of security and compliance factors
-- **Ask for alternatives**: Government environments often need multiple solution approaches
 
-### 🔧 **Hands-On Exercise 1.1: Tool Setup**
+**Why Different Prompting Matters**: Generic prompts may not provide the context AI tools need to understand government-specific constraints, security requirements, or legacy system patterns.
 
-**Objective**: Configure your AI tool for government legacy development
+**Effective Government Prompting Principles**:
+- **Be explicit about context**: Always specify the technology, government domain, and constraints
+- **Request explanations**: Ask for rationale behind suggestions to verify appropriateness  
+- **Verify compliance**: Request consideration of security and federal compliance factors
+- **Ask for alternatives**: Government environments often need multiple solution approaches due to constraints
+
+### 🔧 **Hands-On Exercise 1.1: Baseline AI Tool Testing**
+
+**Objective**: Establish your AI tool's baseline capability with legacy government code patterns
+
+**Why We're Doing This**: Before tackling complex legacy scenarios, you need to understand how well your AI tool recognizes and interprets legacy syntax. This baseline helps you calibrate your expectations and identify areas where you'll need to provide extra context.
 
 **Steps**:
-1. Open your AI coding assistant
-2. Test basic functionality with this simple prompt:
+
+1. **Complete your AI tool configuration** using the checklist above
+   - Review privacy settings for government compliance
+   - Configure offline mode if required by your organization
+   - Document your configuration choices for future reference
+
+2. **Test basic legacy code recognition** with this simple COBOL prompt:
    ```text
    Explain what this code does in simple terms:
    
@@ -91,10 +119,27 @@ AI Tool Checklist:
        MOVE "LOW" TO WS-RISK-LEVEL
    END-IF
    ```
-3. Note how the AI responds to COBOL syntax
-4. Document any configuration options relevant to government use
 
-**Expected outcome**: Understanding of your AI tool's baseline capability with legacy code
+3. **Evaluate the AI response quality**:
+   - Does it recognize this as COBOL syntax?
+   - Does it understand the business logic (risk assessment based on amount)?
+   - How accurate is the explanation?
+   - What gaps or misunderstandings do you notice?
+
+4. **Test government context awareness** with this follow-up prompt:
+   ```text
+   This code is from a government benefit eligibility system. What additional considerations should I have when working with this type of code?
+   ```
+
+5. **Document your baseline assessment**:
+   - AI tool's legacy syntax recognition capability
+   - Level of government context understanding
+   - Configuration choices made for compliance
+   - Areas where you'll need to provide extra context
+
+**Expected Outcome**: Clear understanding of your AI tool's baseline capability with legacy government code, plus proper configuration for your environment.
+
+**Time Investment**: 15 minutes - this baseline understanding will save you time in all future exercises.
 
 ---
 
@@ -163,6 +208,10 @@ Consider:
 
 ### 🔧 **Hands-On Exercise 1.2: Basic Prompting Practice**
 
+**Learning Objective Alignment**: This exercise directly develops your ability to "apply basic prompting strategies" (LO #2) by practicing with three different legacy technologies.
+
+**Why This Exercise Structure**: Working with multiple technology samples simultaneously builds cross-platform pattern recognition - a critical skill when government systems integrate COBOL mainframes with Java middleware and SQL databases.
+
 Work through these three code samples using the prompting templates above:
 
 **Sample A: COBOL Business Logic** (in `code-samples/cobol-sample.cob`)
@@ -170,9 +219,14 @@ Work through these three code samples using the prompting templates above:
 **Sample C: Database Query** (in `code-samples/sql-sample.sql`)
 
 For each sample:
-1. Use Template 1 to understand the code
-2. Use Template 2 to generate documentation
-3. Use Template 3 to identify improvements
+1. **Use Template 1 to understand the code** - builds comprehension skills
+2. **Use Template 2 to generate documentation** - practices structured AI interaction
+3. **Use Template 3 to identify improvements** - develops critical evaluation abilities
+
+**Success Criteria**: 
+- AI tool provides accurate explanations for each technology
+- Generated documentation includes business context
+- Improvement suggestions consider government constraints
 
 **Time allocation**: 5-7 minutes per sample
 
@@ -190,6 +244,10 @@ You've been assigned to enhance a legacy tax processing system that includes:
 The system needs minor enhancements to support a new tax credit calculation.
 
 ### 🔧 **Hands-On Exercise 1.3: Cross-Technology Integration**
+
+**Learning Objective Alignment**: This exercise directly targets LO #3 "Use AI assistance effectively across COBOL, legacy Java, and SQL simultaneously" by requiring you to work across all three technologies in a unified scenario.
+
+**Why This Scenario Matters**: Real government systems rarely exist in isolation. A single business function (like tax processing) typically spans multiple technologies and platforms. This exercise simulates authentic government development work where you must understand how AI tools can help you navigate complex, multi-layered legacy architectures.
 
 **Scenario**: Adding support for a new "Green Energy Tax Credit" across all three technology layers.
 
@@ -249,6 +307,10 @@ The system needs minor enhancements to support a new tax credit calculation.
 
 ### 🔧 **Hands-On Exercise 1.4: Limitation Awareness**
 
+**Learning Objective Alignment**: This exercise directly develops LO #4 "Understand AI tool limitations and appropriate use cases in government environments" by intentionally testing boundaries.
+
+**Why Test Limitations**: Understanding what AI tools cannot do is as important as knowing what they can do. In government environments, the cost of implementing inappropriate AI suggestions can include security breaches, compliance violations, or system failures affecting citizen services.
+
 **Challenge**: Using the tax processing scenario from Exercise 1.3, intentionally test your AI tool's limitations:
 
 1. **Ask for security advice**: "What security considerations should I have for this tax processing code?"
@@ -257,19 +319,27 @@ The system needs minor enhancements to support a new tax credit calculation.
 
 **Objective**: Understand where AI tools help and where human expertise remains essential.
 
+**Expected Learning**: You should discover that AI tools can provide general guidance but lack specific knowledge of your agency's security policies, current compliance requirements, and complex system integration patterns.
+
 ---
 
 ## Assessment and Reflection
 
 ### Practical Challenge
-**Time**: 15 minutes
+**Time**: 15 minutes  
+**Objective**: Demonstrate all four learning objectives in an integrated assessment
 
 Using your AI tool, take the provided legacy government system code sample (in `assessments/challenge-code.cob`) and:
 
-1. Generate comprehensive documentation
-2. Identify three potential improvements
-3. Explain how you would safely implement one improvement
-4. List three questions you would need to research beyond what the AI tool provided
+1. **Setup and Configuration (LO #1)**: Verify your AI tool is properly configured for government use
+2. **Documentation Generation (LO #2)**: Use effective prompting to generate comprehensive documentation
+3. **Technology Integration (LO #3)**: Identify how this COBOL code might integrate with Java and SQL components
+4. **Limitation Assessment (LO #4)**: List three questions you would need to research beyond what the AI tool provided
+
+**Success Criteria**:
+- Documentation includes business context and government considerations
+- Integration analysis considers multi-platform government architecture patterns
+- Limitation identification demonstrates realistic understanding of AI tool boundaries
 
 ### Reflective Analysis
 **Time**: 10 minutes

@@ -6,6 +6,22 @@ This comprehensive, open-source learning sandbox teaches developers how to effec
 
 **Why This Matters**: While abundant content exists for modern greenfield development, there's virtually no educational material focused on the unique challenges and constraints of government legacy systems.
 
+**What This Is NOT**: This is not a tutorial on how to use AI coding assistants. This resource assumes you have basic familiarity with AI tools and focuses specifically on applying them to legacy government systems.
+
+## Prerequisites
+
+Before starting this curriculum, you should have:
+
+- **Basic AI tool experience**: Familiarity with at least one AI coding assistant (GitHub Copilot, Claude Code, Cursor, etc.)
+- **Programming background**: Comfortable reading code in at least one language
+- **Professional development experience**: Understanding of software development workflows
+- **Government context awareness**: Helpful but not required - we provide government-specific background
+
+**New to AI coding assistants?** Start with these resources first:
+- [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
+- [Getting Started with AI Coding Tools](https://code.visualstudio.com/docs/copilot/overview)
+- [AI-Assisted Programming Best Practices](https://martinfowler.com/articles/2023-chatgpt-xu-hao.html)
+
 ## Target Audience
 
 **Primary**: Experienced government developers new to AI tools  
@@ -87,9 +103,14 @@ lessons/
 
 This project is designed for community contribution and government agency adoption. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
+## Additional Resources
+
+- **[Government Development Resources](GOVERNMENT_RESOURCES.md)**: Federal standards, best practices, and references that inform this project
+- **[Repository Structure](REPOSITORY_STRUCTURE.md)**: Detailed project organization and development status
+
 ## License
 
-[Open Source License - TBD]
+MIT License - See [LICENSE](LICENSE) for details
 
 ---
 
