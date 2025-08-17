@@ -41,12 +41,34 @@ We start with basic AI tool concepts and progress through intermediate scenarios
 - **Progressive Complexity**: Build from basic concepts to advanced integration scenarios
 - **Dual Assessment**: Practical challenges combined with reflective analysis
 
+## Branching Strategy
+
+Each lesson uses a structured branching approach for different learning needs:
+
+- **`lesson-N-start`**: Clean starting point with practice materials and instructions
+- **`lesson-N-complete`**: Full implementation with solution examples and worked demonstrations  
+- **`lesson-N-variations`**: Alternative approaches and advanced scenarios
+
+### Current Available Branches
+- **`main`**: Latest development version with complete materials
+- **`lesson-01-start`**: Lesson 1 starting materials (practice code samples and instructions)
+- **`lesson-01-complete`**: *(Coming soon)* Lesson 1 with solution examples and worked AI prompting demonstrations
+
 ## Getting Started
 
-1. Choose your lesson based on your experience level
-2. Each lesson includes technology overviews with external learning resources
-3. Follow the hands-on exercises using your preferred AI coding assistant
-4. Complete both practical challenges and reflective assessments
+### For Learners
+1. **Clone the repository**: `git clone https://github.com/callistorage/SBX_GenAI_GovLegacy_Learning.git`
+2. **Choose your starting point**: 
+   - New to AI tools? Start with `git checkout lesson-01-start`
+   - Want to see examples? Use `git checkout lesson-01-complete` *(when available)*
+3. **Follow the lesson materials**: Each lesson includes technology overviews and external learning resources
+4. **Use your AI tool**: Practice with your preferred AI coding assistant (GitHub Copilot, Claude Code, etc.)
+5. **Complete assessments**: Both practical challenges and reflective analysis
+
+### For Instructors
+- Use the `instructor-guide.md` in each lesson for teaching strategies and common challenges
+- Switch between branches to demonstrate different phases of learning
+- Adapt materials for your specific audience and time constraints
 
 ## Repository Structure
 
