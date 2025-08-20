@@ -50,7 +50,7 @@ This lesson introduces three core legacy technologies common in government syste
 
 ### Understanding Government Environment Constraints
 
-**Why This Matters**: Government development environments have unique security, compliance, and operational constraints that don't exist in private sector development. Understanding these constraints helps you configure AI tools appropriately and avoid potential security or compliance issues. Please note different agencies and levels of government will have more or less specific standards. You should always check with your risk manager prior to using any AI technology within your environment. 
+**Why This Matters**: Government development environments have unique security, compliance, and operational constraints that generally don't exist in private sector development. Understanding these constraints helps you configure AI tools appropriately and avoid potential security or compliance issues. Please note different agencies and levels of government will have more or less specific standards. You should always check with your risk manager prior to using any AI technology within your environment. 
 
 **Key Government Constraints**:
 - **Security considerations**: Code may contain sensitive information that cannot be shared with cloud-based AI services
@@ -68,27 +68,33 @@ This lesson introduces three core legacy technologies common in government syste
 
 **Purpose**: Ensure your AI tool usage complies with government security requirements and protects sensitive information.
 
-```text
-AI Tool Configuration Checklist:
-□ Review data sharing and privacy policies (understand what gets transmitted)
-    → WHY: Government code may contain sensitive patterns, citizen data, or classified algorithms
-□ Configure offline mode if available (for air-gapped environments)
-    → WHY: Many government networks prohibit cloud AI access; offline capabilities ensure tool usability
-□ Disable automatic code sharing/telemetry (protect sensitive patterns)
-    → WHY: Default telemetry may transmit code snippets for product improvement, creating security risks
-□ Set up project-specific configurations (isolate government work)
-    → WHY: Prevents cross-contamination between personal projects and government work environments
-□ Document tool approval status for your organization (compliance tracking)
-    → WHY: Audit trails are required for government development tool usage and security reviews
-□ Understand data retention policies (know how long your code is stored)
-    → WHY: Government data lifecycle requirements may conflict with vendor retention policies
-```
+**AI Tool Configuration Steps:**
 
-**Action Required**: Review your AI tool's privacy settings now and configure according to your organization's security requirements, even if you're doing this lesson on a personal computer, just for practice. 
+1. **Review data sharing and privacy policies** (understand what gets transmitted)
+
+2. **Configure offline mode if available** (for air-gapped environments)
+
+3. **Disable automatic code sharing/telemetry** (protect sensitive patterns)
+
+4. **Set up project-specific configurations** (isolate government work)
+
+5. **Document tool approval status for your organization** (compliance tracking)
+
+6. **Understand data retention policies** (know how long your code is stored)
+
+**Why These Steps Matter for Government Use:**
+- Government code may contain sensitive patterns, citizen data, or classified algorithms that require careful data handling
+- Many government networks prohibit cloud AI access; offline capabilities ensure tool usability in restricted environments
+- Default telemetry may transmit code snippets for product improvement, creating potential security risks
+- Cross-contamination between personal projects and government work environments must be prevented
+- Audit trails are required for government development tool usage and security reviews
+- Government data lifecycle requirements may conflict with vendor retention policies
+
+**Action Required**: Review your AI tool's privacy settings now and configure according to your organization's security requirements, even if you're doing this lesson on a personal computer. It's good to get in the habit! 
 
 #### 2. Government-Friendly Prompting Approach
 
-**Why Different Prompting Matters**: Generic prompts may not provide the context AI tools need to understand government-specific constraints, security requirements, or legacy system patterns.
+**Why Different Prompting Matters**: Generic prompts may not provide the context AI tools need to understand government-specific constraints, security requirements, or legacy system patterns. Hint: Most AI coding assistants have ways to store this context so you don't have to include it in every prompt! 
 
 **Effective Government Prompting Principles**:
 - **Be explicit about context**: Always specify the technology, government domain, and constraints
